@@ -51,12 +51,11 @@ You can go to [http://192.168.33.10/docs/phpdoc/index.html][6] or the vhost that
 
 Enjoy!
 
-[1]:  https://github.com/lechatquidanse/StevieG-dropped/blob/master/src/LCQD/App/Resources/data/PremierLeague1314.csv
-[2]:  https://github.com/lechatquidanse/StevieG-dropped/blob/master/src/LCQD/App/Resources/doc/index.rst
-[3]:  https://github.com/kleiram/vagrant-symfony
-[4]:  https://github.com/lechatquidanse/StevieG-dropped/blob/master/vagrant/README.md
-[5]:  http://192.168.33.10/
-[6]:  http://192.168.33.10/docs/phpdoc/index.html
+[1]:  https://github.com/lechatquidanse/StevieG-dropped/blob/master/src/LCQD/App/Resources/doc/index.rst
+[2]:  https://github.com/kleiram/vagrant-symfony
+[3]:  https://github.com/lechatquidanse/StevieG-dropped/blob/master/vagrant/README.md
+[4]:  http://192.168.33.10/
+[5]:  http://192.168.33.10/docs/phpdoc/index.html
 
 Authors
 -------
