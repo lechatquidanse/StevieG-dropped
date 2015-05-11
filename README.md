@@ -1,7 +1,7 @@
 StevieG-dropped
 ========================
 
-This application determine, for each team of a championship, the minimum number of games that need to be excluded in order for that team to win the league
+This application determine, for each team of a championship, the minimum number of games that need to be excluded in order for that team to win the league.
 Based on the latest silex edition, it includes a vagrant environnement and an online documentation.
 For the moment it displays only one league described by a list of game in [this csv file][1].
 You can find more technical informations [here][2].
@@ -51,12 +51,12 @@ You can go to [http://192.168.33.10/docs/phpdoc/index.html][6] or the vhost that
 
 Enjoy!
 
-[1]:  https://github.com/lechatquidanse/StevieG-dropped/blob/master/src/LCQD/App/Resources/PremierLeague1314.csv
+[1]:  https://github.com/lechatquidanse/StevieG-dropped/blob/master/src/LCQD/App/Resources/data/PremierLeague1314.csv
 [2]:  https://github.com/lechatquidanse/StevieG-dropped/blob/master/src/LCQD/App/Resources/doc/index.rst
 [3]:  https://github.com/kleiram/vagrant-symfony
 [4]:  https://github.com/lechatquidanse/StevieG-dropped/blob/master/vagrant/README.md
 [5]:  http://192.168.33.10/
-[5]:  http://192.168.33.10/docs/phpdoc/index.html
+[6]:  http://192.168.33.10/docs/phpdoc/index.html
 
 Authors
 -------
