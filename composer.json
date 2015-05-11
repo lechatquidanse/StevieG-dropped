@@ -1,0 +1,16 @@
+{
+    "require": {
+        "silex/silex": "~1.2",
+        "monolog/monolog": "^1.13",
+        "doctrine/common": "2.6.*@dev",
+        "guzzlehttp/guzzle": "~5.0",
+        "twig/twig": "^1.18",
+        "symfony/twig-bridge": "^2.6",
+        "phpdocumentor/phpdocumentor": "2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    }
+}

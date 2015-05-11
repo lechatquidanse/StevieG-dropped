@@ -1,0 +1,7 @@
+/var/cache/*
+/var/logs/*
+!var/cache/.gitkeep
+!var/logs/.gitkee
+/vendor/
+/web/docs/*
+.DS_Store

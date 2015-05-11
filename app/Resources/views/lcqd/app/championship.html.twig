@@ -1,0 +1,49 @@
+{% extends 'lcqd/app/layout.html.twig' %}
+
+{% block content %}
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Here is the number of games excluded a team need be champion:</h1>
+        <div class="row">
+        	<div class="bs-example" data-example-id="bordered-table">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Team Name</th>
+							<th>Points</th>
+							<th>Game To exclude</th>
+							<th>Played</th>
+							<th>Won</th>
+							<th>Drawn</th>
+							<th>Lost</th>
+							<th>Att</th>
+							<th>Def</th>
+							<th>Diff</th>
+						</tr>
+					</thead>
+					<tbody>
+					{% for team in teams %}
+						<tr>
+							<th scope="row">{{ loop.index }}</th>
+							<td>{{ team.name }}</td>
+							<td>{{ team.points }}</td>
+							<th><a href="{{ path('lcqd_app_championship_team', {'championshipKey': championshipKey, 'teamKey': team.name}) }}">{{ gamesToExclude[team.name]|length }}</a></th>
+							<td>{{ team.getGamesPlayed() }}</td>
+							<td>{{ team.getWonGamesKey|length }}</td>
+							<td>{{ team.getDrawnGamesKey|length }}</td>
+							<td>{{ team.getLostGamesKey|length }}</td>
+							<td>{{ team.getGoalsFor() }}</td>
+							<td>{{ team.getGoalAgainst() }}</td>
+							<td>{{ team.getGoalDiff() }}</td>
+						</tr>
+					{% endfor %}
+					</tbody>
+				</table>
+			</div>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+{% endblock %}

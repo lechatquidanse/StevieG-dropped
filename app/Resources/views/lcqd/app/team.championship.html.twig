@@ -1,0 +1,79 @@
+{% extends 'lcqd/app/layout.html.twig' %}
+
+{% block content %}
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Here is the list of games excluded and virtual ranking, {{ teamKey}} need be champion:</h1>
+        <div class="row">
+        	<div class="col-md-8">
+	        	<div class="bs-example">
+	        		<h2>Virtual Ranking</h2>
+					<table class="table table-bordered table-striped">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Team Name</th>
+								<th>Points</th>
+								<th>Played</th>
+								<th>Won</th>
+								<th>Drawn</th>
+								<th>Lost</th>
+								<th>Att</th>
+								<th>Def</th>
+								<th>Diff</th>
+							</tr>
+						</thead>
+						<tbody>
+						{% for team in teams %}
+							<tr>
+								<th scope="row">{{ loop.index }}</th>
+								<td>{{ team.name }}</td>
+								<td>{{ team.points }}</td>
+								<td>{{ team.getGamesPlayed() }}</td>
+								<td>{{ team.getWonGamesKey|length }}</td>
+								<td>{{ team.getDrawnGamesKey|length }}</td>
+								<td>{{ team.getLostGamesKey|length }}</td>
+								<td>{{ team.getGoalsFor() }}</td>
+								<td>{{ team.getGoalAgainst() }}</td>
+								<td>{{ team.getGoalDiff() }}</td>
+							</tr>
+						{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+        	<div class="col-md-4">
+	        	<div class="bs-example">
+	        		<h2>{{ gamesToExclude|length }} games removed</h2>
+	        		<table class="table table-striped">
+        				<thead>
+        					<tr>
+        						<th>Date</th>
+        						<th>HomeTeam</th>
+        						<th>HomeScore</th>
+        						<th>-</th>
+        						<th>AwayScore</th>
+        						<th>AwayTeam</th>
+        					</tr>
+        				</thead>
+        				<tbody>
+        				{% for game in gamesToExclude %}
+        					<tr>
+	        					<td>{{ game.getDate() }}</td>
+	        					<td>{{ game.getHomeTeamKey() }}</td>
+	        					<td>{{ game.getHomeTeamScore() }}</td>
+	        					<td>-</td>
+	        					<td>{{ game.getAwayTeamScore() }}</td>
+	        					<td>{{ game.getAwayTeamKey() }}</td>
+	        				</tr>
+        				{% endfor %}
+        				</tbody>
+	        		</table>
+	        	</div>
+        	</div>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+{% endblock %}

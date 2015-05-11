@@ -1,0 +1,21 @@
+{% extends 'lcqd/app/layout.html.twig' %}
+
+{% block content %}
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Please, select the task needed:</h1>
+        <hr>
+
+        <div class="row">
+        	<div class="bs-example" data-example-id="block-btns">
+    				<div class="well center-block" style="max-width: 400px;">
+    					<a href="{{ path('lcqd_app_favorite') }}" type="button" class="btn btn-success btn-lg btn-block">Your favorite Team</a>
+    					<a href="{{ path('lcqd_app_championship', {'championshipKey': 'bpl1314'}) }}" type="button" class="btn btn-primary btn-lg btn-block">BPL 13-14: Games to be first</a>
+    				</div>
+			   </div>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+{% endblock %}
